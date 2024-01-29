@@ -1,0 +1,9 @@
+{% extends "inicio.html" %}
+{% block titulo_EDITAR_INCI %}
+<form action="" method="POST"> {% csrf_token %}
+    {{mi_formu}}
+<input type="submit" value="confirmar" >
+
+</form>
+
+{% endblock %}

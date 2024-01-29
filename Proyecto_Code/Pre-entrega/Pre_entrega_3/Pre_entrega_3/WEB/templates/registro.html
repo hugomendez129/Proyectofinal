@@ -1,0 +1,12 @@
+{% extends "inicio.html" %}
+{% block titulo_regis %}
+<form action="" method="POST"> 
+    {% csrf_token %}
+    <div style="display: block;">
+        {{ formu.as_p }}
+    </div>
+    <input type="submit" value="Registro">
+</form>
+
+    
+                {% endblock %}

@@ -1,0 +1,14 @@
+{% extends "inicio.html" %}
+{% block titulo_login %}
+<form action="" method="POST"> {% csrf_token %}
+    {{formu}}   
+    
+    <input type="submit" value="Ingrese sesion">
+    
+    <p>¿No tienes cuenta? </p>
+    <a href="{% url 'registro' %}" style="color: white;">Registrate aqui</a>
+
+    </form>
+    
+  
+                        {% endblock %}

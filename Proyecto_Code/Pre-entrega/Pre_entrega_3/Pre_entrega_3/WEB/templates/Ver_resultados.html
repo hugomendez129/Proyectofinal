@@ -1,0 +1,47 @@
+{% extends "inicio.html" %}
+{% block titulo_buscar_inci %}
+{%  if incidencia %}
+
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    padding: 10px; /* Ajusta este valor según sea necesario */
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #080d1373;
+  }
+</style>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Título</th>
+      <th>Estado</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for x in incidencia %}
+    <tr>
+      <td>{{ x.id }}<button><a href="{% url 'act_inci' x.id %}">  Editar</a> 
+      </button><button><a href="{% url 'elim_inci' x.id %}">  Eliminar</a> 
+      </button></td> 
+      <td>{{ x.titulo }}</td>
+      <td>{{ x.Estado }}</td>
+      
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+
+
+
+                {% endblock %}

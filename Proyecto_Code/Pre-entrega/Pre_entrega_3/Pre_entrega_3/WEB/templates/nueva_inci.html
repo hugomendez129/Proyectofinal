@@ -1,0 +1,12 @@
+{% extends "inicio.html" %}
+{% block titulo_NUEVA_inci %}
+    
+                    <h1 class="mb-5">NUEVA INCIDENCIA</h1>
+                    <form action="" method="POST">   {% csrf_token %}<!-- mandamos a guardar con post y coloco que vamos a nuevaserie-->
+                     
+                        {{mi_formu.as_p}}
+                    
+                        <input type="submit" value="guardar">
+                        </form>
+         
+{% endblock %}
