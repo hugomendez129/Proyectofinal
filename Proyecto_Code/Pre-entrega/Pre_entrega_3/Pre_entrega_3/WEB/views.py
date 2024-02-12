@@ -114,7 +114,7 @@ def CrearIncidencia(request):
             info = nuevo_form.cleaned_data
             nueva_inci=Incidencia(titulo   = info["titulo"] ,
                                   descripcion = info["descripcion"] ,
-                                  Estado   =info["Estado"]
+                                  Estado   =info["Estado"].upper()
                                   )
             nueva_inci.save()
             return render(request,"incidencias.html" )
@@ -126,6 +126,7 @@ def CrearIncidencia(request):
 def BuscarIncidencia(request):
     if request.method == "GET":
         Incidencia_pedida = request.GET.get("Estado", "")
+        Incidencia_pedida = Incidencia_pedida.upper()
         if Incidencia_pedida:
             resultados_inci = Incidencia.objects.filter(Estado__icontains=Incidencia_pedida)
             return render(request, "Ver_resultados.html", {"incidencia": resultados_inci, "Incidencia_pedida": Incidencia_pedida})
@@ -141,7 +142,7 @@ def actualizar_inci(request,id_old):
             #actualizo
             id_escogido.titulo= info["titulo"]
             id_escogido.descripcion=info["descripcion"]
-            id_escogido.Estado=info["Estado"]
+            id_escogido.Estado=info["Estado"].upper()
             id_escogido.save()
             return render(request,"inicio.html" )
         

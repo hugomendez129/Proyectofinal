@@ -19,11 +19,11 @@ class registrarUsuario(UserCreationForm):
       
 
 class EditarUsuario(UserCreationForm):
-    email = forms.EmailField(label="Corre electronico")
-    password1 = forms.CharField(label="ingrere la contraseña",widget=forms.PasswordInput)
-    password2 = forms.CharField(label= "confirme la contraseña",widget=forms.PasswordInput)
-    first_name = forms.CharField(label="ingrese su nombre")
-    last_name = forms.CharField(label="ingrese su apellido")
+    email = forms.EmailField(label="Correo electronico")
+    password1 = forms.CharField(label="Ingrere la contraseña",widget=forms.PasswordInput)
+    password2 = forms.CharField(label= "Confirme la contraseña",widget=forms.PasswordInput)
+    first_name = forms.CharField(label="Ingrese su nombre")
+    last_name = forms.CharField(label="Ingrese su apellido")
     class Meta:
       model = User
       fields = ["email","password1","password2","first_name","last_name"]
