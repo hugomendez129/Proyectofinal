@@ -16,7 +16,9 @@ Back-end
 
 Pruebas Realizadas
 
-Consulte el archivo titulado "Tests Python Project CH.xlsx" que se encuentra en este repositorio.
+Consulte el archivo titulado "Casos de prueba.xlsx" que se encuentra en este repositorio.
 
 Video Demostración
+
+https://drive.google.com/drive/folders/1U6pZ5_achrWz_IRoudXiy95PNI-7NaYU?usp=sharing
 
