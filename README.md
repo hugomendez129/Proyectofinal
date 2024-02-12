@@ -11,6 +11,7 @@ Front-End
 
 
 Back-end
+
 • Python 3.12.2
 • Django 5.0.1
 
